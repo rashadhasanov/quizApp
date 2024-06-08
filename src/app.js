@@ -58,11 +58,11 @@ const TOTAL_QUESTIONS = questionsAll.length;
 // Start conditions
 
 let text = "Enter your first and last name...";
+let studentName = "";
 let index = 0;
 let correctAnswers;
 let remainingTime;
 let currentQuestion;
-let studentName;
 let timeUpdate;
 
 function initializeConditions() {
@@ -70,7 +70,6 @@ function initializeConditions() {
   correctAnswers = 0;
   remainingTime = INITIAL_TIME;
   currentQuestion = 0;
-  studentName = "";
   clearInterval(timeUpdate);
 }
 
@@ -78,7 +77,7 @@ function writeText() {
   if (index < text.length) {
     document.getElementById("message").textContent += text.charAt(index);
     index++;
-    setTimeout(writeText, 100);
+    setTimeout(writeText, 50);
   } else {
     return;
   }
@@ -172,7 +171,6 @@ function handleClickOptions(e) {
   if (currentQuestion == TOTAL_QUESTIONS - 1) {
     hiddenNextQuestionBtn();
   }
-  console.log(questionsAll[currentQuestion].answer, e.target.textContent[0]);
   if (questionsAll[currentQuestion].answer == e.target.textContent[0]) {
     correctAnswers++;
     e.target.style.borderBottom = "2px solid green";
