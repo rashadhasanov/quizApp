@@ -1,0 +1,27 @@
+@media screen and (max-width: 440px) {
+  body {
+    overflow: hidden;
+  }
+
+  .login-container {
+    width: 80%;
+  }
+  .login-container form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .login-container p {
+    text-align: center;
+  }
+
+  .question-container {
+    width: 95%;
+    gap: 35px;
+  }
+
+  .finish-container {
+    max-width: 90%;
+  }
+}

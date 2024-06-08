@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <p id="message"></p>
+      <form>
+        <input
+          type="text"
+          name="nameInput"
+          id="nameInput"
+          placeholder="Name and Lastname"
+        />
+        <button id="quizBtn">Go Quiz</button>
+      </form>
+    </div>
+
+    <button id="start-quiz-btn" class="hidden">Start Quiz</button>
+
+    <div class="question-container hidden">
+      <div class="description">
+        <h2>Quizz App</h2>
+        <span class="time"
+          >Time<span class="cur-time" id="cur-time">10</span>
+        </span>
+      </div>
+      <div class="progress-container">
+        <div class="progress"></div>
+      </div>
+      <p class="question" id="question">
+        I. Which is the javascript package management application?
+      </p>
+      <button class="choice-btn">a: Node.js</button>
+      <button class="choice-btn">b: Typescript</button>
+      <button class="choice-btn">c: Npm</button>
+      <div class="question-container-footer">
+        <span id="active-question">1 / 5</span>
+        <button id="next-question-btn">Next Question</button>
+        <button id="show-result-btn" class="hidden">Show Result</button>
+      </div>
+    </div>
+
+    <div class="finish-container hidden">
+      <div class="crown-container">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+      <p class="finish-message">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, est.
+      </p>
+      <div class="finish-btn-container">
+        <button class="finish-btn" id="reload-btn">Start Quiz</button>
+        <button class="finish-btn" id="reset-btn">Finish Quiz</button>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+  </body>
+</html>
